@@ -1,10 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Header from './Component/Header';
 import FeedbackData from './Data/FeedbackData';
 import { useState } from 'react';
 import FeedbackList from './Component/FeedbackList';
 import FeedbackStatus from './Component/FeedbackStatus';
+import FeedbackForm from './Component/FeedbackForm';
 
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
@@ -21,6 +22,7 @@ function App() {
     <>
 <Header   />
     <div className="container">
+      <FeedbackForm />
       <FeedbackStatus  feedback={feedback} />
        <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
     </div>
